@@ -1,2 +1,2 @@
 # Wireframes
- Repositório com diferentes Wirframes. Criado com objetivo de praticar HTML e CSS
+ Repositório com diferentes Wireframes. Criado com objetivo de praticar HTML e CSS
