@@ -9,6 +9,8 @@
 
     <style>
 
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Righteous&display=swap');
+
         :root
         {
             --cor01: #36453b;
@@ -16,6 +18,9 @@
             --cor03: #596869;
             --cor04: #c2c1a5;
             --cor05: #f5f9e9;
+
+            --headerTitle: 'Oswald', sans-serif;
+            --mainTitles: 'Righteous', cursive, sans-serif
         }
 
         *
@@ -42,9 +47,11 @@
         header h1
         {
             color: white;
+            font-family: var(--headerTitle);
             text-align: center;
             padding-top: 35px;
             font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         header p
@@ -54,12 +61,13 @@
             padding-top: 10px;
             width: 300px;
             margin: auto;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         nav
         {   
             padding-left: 10px;
-            padding-top: 25px;
+            padding-top: 18px;
             font-weight: bold;
         }
 
@@ -67,7 +75,7 @@
         {
             color: var(--cor04);
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 15px;
             padding: 10px;
         }
 
@@ -93,13 +101,17 @@
         main h1
         {
             font-size: 2em;
+            font-weight: normal;
             color: var(--cor01);
+            font-family: var(--mainTitles);
         }
 
         main h2
         {
             font-size: 1.75em;
+            font-weight: normal;
             color: var(--cor01);
+            font-family: var(--mainTitles);
         }
 
         img
@@ -119,6 +131,31 @@
             line-height: 1.5em;
             text-align: justify;
             margin: 10px 0 20px 0;
+            text-indent: 15px;
+        }
+
+        main strong
+        {
+            color: var(--cor01);
+            font-size: 1.04em;
+        }
+
+        main a
+        {
+            color: var(--cor01);
+            font-size: 1.04em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        main a:hover
+        {
+            text-decoration: underline;
+        }
+
+        main a::after
+        {
+            content: '\1F517';
         }
 
         section
@@ -128,7 +165,55 @@
 
         aside
         {
-            padding: 30px
+            background-color: var(--cor04);
+            margin: 0 30px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+        }
+
+        aside h2
+        {
+            background-color: var(--cor03);
+            font-family: var(--mainTitles);
+            font-weight: normal;
+            color: var(--cor05);
+            padding: 10px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        aside p
+        {
+            padding: 7.5px 20px;
+        }
+
+        aside ul
+        {
+            columns: 2;
+        }
+
+        section#videoSection
+        {
+            background-color: var(--cor02);
+            position: relative;
+            margin: 0 0 20px 0;
+            padding-bottom: 54.5%;
+        }
+
+        section#videoSection > iframe
+        {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;    
+        }
+
+        section#finallySection
+        {
+            padding: 2.5px 15px 15px 15px;
         }
 
         /* ====================================================== */
@@ -189,15 +274,18 @@
 
                 <h1>Titulo do Artigo</h1>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint neque vero voluptatibus velit quis voluptatum ea quidem, laboriosam veniam. Dolores magnam nemo ad quibusdam molestias perferendis aut consequatur autem numquam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur fugit pariatur dolore tenetur accusantium, aliquid, voluptates numquam voluptatibus quibusdam reprehenderit? Fugiat quam aspernatur, cumque animi saepe quo ipsa voluptates!
+                    Lorem ipsum, dolor sit amet consectetur <strong>adipisicing</strong> elit. Sint neque vero voluptatibus velit quis voluptatum ea quidem, laboriosam veniam. Dolores magnam nemo ad quibusdam molestias perferendis aut consequatur autem numquam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta <strong>consectetur</strong> fugit pariatur dolore tenetur accusantium, <a href="#">aliquid</a>, voluptates numquam voluptatibus quibusdam reprehenderit? Fugiat quam <strong>aspernatur</strong>, cumque animi saepe quo ipsa voluptates!
                 </p>
 
                 <h2>Subtítulo 01</h2>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint neque vero voluptatibus velit quis voluptatum ea quidem, laboriosam veniam. Dolores magnam nemo ad quibusdam molestias perferendis aut consequatur autem numquam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur fugit pariatur dolore tenetur accusantium, aliquid, voluptates numquam voluptatibus quibusdam reprehenderit? Fugiat quam aspernatur, cumque animi saepe quo ipsa voluptates!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint neque vero voluptatibus velit quis voluptatum ea quidem, laboriosam veniam. Dolores magnam nemo ad quibusdam molestias perferendis aut <strong>consequatur</strong> autem numquam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur fugit pariatur dolore tenetur accusantium, aliquid, voluptates numquam voluptatibus <a href="#">quibusdam</a> reprehenderit? Fugiat quam <strong>aspernatur</strong>, cumque animi saepe quo ipsa voluptates!
                 </p>
 
-                <img src="imagens/dan-droids.png" alt="Imagem de Teste" class="imgG">
+                <picture>
+                    <source media="(max-width: 610px)" srcset="imagens/dan-droids-pq.png">
+                    <img src="imagens/dan-droids.png" alt="Imagem de Teste" class="imgG">
+                </picture>
 
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat laboriosam perspiciatis temporibus fugit consequuntur corporis pariatur illum soluta, ad autem, ipsam maiores expedita veritatis voluptates optio mollitia quo omnis quibusdam.
@@ -205,10 +293,13 @@
 
                 <h2>Subtítulo 02</h2>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint neque vero voluptatibus velit quis voluptatum ea quidem, laboriosam veniam. Dolores magnam nemo ad quibusdam molestias perferendis aut consequatur autem numquam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta consectetur fugit pariatur dolore tenetur accusantium, aliquid, voluptates numquam voluptatibus quibusdam reprehenderit? Fugiat quam aspernatur, cumque animi saepe quo ipsa voluptates!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint neque vero voluptatibus velit quis voluptatum ea quidem, laboriosam veniam. Dolores magnam nemo ad quibusdam molestias <strong>perferendis</strong> aut consequatur autem numquam! Lorem ipsum dolor sit, amet consectetur <strong>adipisicing</strong> elit. Dicta consectetur fugit pariatur dolore tenetur accusantium, aliquid, voluptates numquam voluptatibus quibusdam reprehenderit? Fugiat quam aspernatur, cumque animi saepe quo ipsa voluptates!
                 </p>
 
-                <img src="imagens/irina-blok.jpg" alt="Imagem de Teste 2" class="imgG">
+                <picture>
+                    <source media="(max-width: 610px)" srcset="imagens/irina-blok-pq.jpg">
+                    <img src="imagens/irina-blok.jpg" alt="Imagem de Teste 2" class="imgG">
+                </picture>
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ipsum ad quae earum laudantium dolor possimus reiciendis ipsam? Perspiciatis fuga quibusdam reiciendis nobis voluptates, alias cum maiores adipisci sed odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus id sint, cupiditate sed voluptates veniam quia aliquam dolorum incidunt nobis possimus eum exercitationem aspernatur similique omnis nihil eos. Debitis, quos?
@@ -217,12 +308,12 @@
                 <img src="imagens/bugdroid.png" alt="Imagem de Teste 3" class="imgP">
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, tempora quaerat nemo exercitationem ipsam facere provident dicta sequi, quasi corporis voluptas, hic veniam voluptatem odit ad explicabo a. Quibusdam, molestiae!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Blanditiis</strong>, tempora quaerat nemo exercitationem ipsam facere provident dicta sequi, quasi corporis voluptas, hic veniam voluptatem odit ad explicabo a. <a href="#">Quibusdam</a>, molestiae!
                 </p>
 
             </section>
 
-            <section>
+            <section id="videoSection">
 
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/S5yFleibGU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -233,28 +324,31 @@
                 <h2>Título do Aside</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus libero, explicabo dolorum corporis impedit magni provident nesciunt, doloremque incidunt recusandae rem maiores, totam consequatur deleniti? Ipsam sit illum reprehenderit voluptatibus. 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus libero, <strong>explicabo</strong> dolorum corporis impedit magni provident nesciunt, doloremque incidunt recusandae rem maiores, totam consequatur deleniti? Ipsam sit illum reprehenderit voluptatibus. 
                 </p>
 
                 <ul>
-                    <li>João Antônimo</li>
-                    <li>João Anta Ônibus</li>
-                    <li>João Antonomásia</li>
-                    <li>João Antílope</li>
-                    <li>João Anticristo</li>
-                    <li>João Antroscopia</li>
-                    <li>João Antiraluca</li>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <li>Item 6</li>
+                    <li>Item 7</li>
+                    <li>Item 8</li>
+                    <li>Item 9</li>
+                    <li>Item 10</li>
                 </ul>
 
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus illum, maiores ab dignissimos natus laudantium inventore ipsa beatae sint quidem ex. Nulla ab magnam commodi.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus illum, maiores ab dignissimos natus laudantium inventore ipsa beatae sint quidem ex. Nulla ab <a href="#">magnam</a> commodi.
                 </p>
 
             </aside>
 
-            <section>
+            <section id="finallySection">
                 <p>
-                    Só pra finalizar, queria dizer que estou decepcionado com Priscila :(
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ipsum non <strong>deserunt</strong> fugiat animi. 
                 </p>
             </section>
 
@@ -266,7 +360,7 @@
 
     <footer>
 
-        <p>Site Criado por <strong><a href="https://github.com/rodrigolds">Rodrigo Lins</a></strong></p>
+        <p>Site Criado por <strong><a href="https://github.com/rodrigolds" target="_blank" rel="external">Rodrigo Lins</a></strong></p>
 
     </footer>
     
